@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+/* HEADER */
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #27b6c9;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* HERO */
+.hero {
+    width: 100%;
+    height: 350px;
+    background-image: url("img/Pousada.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* SEÇÃO VANTAGENS */
+.vantagens {
+    color: #075966;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.vantagens h2 {
+    color: #075966;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* GRID DOS ITENS */
+.lista-vantagens {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.vantagem-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vantagem-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.vantagem-item p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* SEÇÃO DAS SUÍTES */
+.suite-card-1 {
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #1996ad;
+    padding: 50px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.suite-card-2 {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #27b6c9;
+    padding: 50px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* IMAGENS DAS SUÍTES */
+.suite-card-1 img {
+    margin-left: 5%;
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+}
+.suite-card-2 img {
+    margin-left: 5%;
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+}
+
+/* INFO DAS SUÍTES */
+.suite-info h3 {
+    margin-left: 10%;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.suite-info p {
+    margin-left: 5%;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* SEÇÃO CONTATO */
+.titulo h2{
+    color: #075966;
+    text-align: center;
+    padding: 35px 35px;
+    background-color: #ffffff;
+    font-size: 28px;
+}
+.contato {
+    color: #075966;
+    text-align: center;
+    padding: 100px 50px;
+    background-color: #ffffff;
+}
+
+.contato .whatsapp {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.icone-wpp {
+    width: 44px;
+    height: 44px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+/* RESPONSIVIDADE MOBILE — ATÉ 768px */
+
+@media (max-width: 768px) {
+
+    .topo {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero {
+        height: 200px;
+    }
+
+    .lista-vantagens {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .vantagens h2 {
+        font-size: 24px;
+    }
+
+    .suite-card-1,
+    .suite-card-2 {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+        gap: 15px;
+    }
+
+    .suite-card-1 img,
+    .suite-card-2 img {
+        margin: 0;
+        width: 100%;
+        height: 200px;
+        max-width: 350px;
+        border-radius: 10px;
+    }
+
+    .suite-info h3,
+    .suite-info p {
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    .titulo h2 {
+        font-size: 24px;
+        padding: 25px 10px;
+    }
+
+    .contato {
+        padding: 40px 20px;
+    }
+
+    .contato .whatsapp {
+        font-size: 20px;
+    }
+
+    .icone-wpp {
+        width: 36px;
+        height: 36px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 20px;
+    }
+}
+
+/* RESPONSIVIDADE EXTRA — ATÉ 480px (celular pequeno) */
+
+@media (max-width: 480px) {
+
+    .hero {
+        height: 160px;
+    }
+
+    .vantagens h2 {
+        font-size: 20px;
+    }
+
+    .suite-card-1 img,
+    .suite-card-2 img {
+        height: 180px;
+    }
+
+    .suite-info p {
+        font-size: 14px;
+    }
+
+    .contato .whatsapp {
+        font-size: 18px;
+    }
+}
